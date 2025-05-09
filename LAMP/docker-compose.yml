@@ -5,7 +5,7 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - C:/Users/mame/Documents/DAW/PES:/var/www/html
+      - C:/Users/mame/Documents/DAW:/var/www/html
     depends_on:
       - mysql
 
