@@ -1,5 +1,6 @@
 services:
   apache:
+    build: .
     image: php:8.3-apache
     container_name: apache
     ports:
@@ -8,6 +9,8 @@ services:
       - C:/Users/mame/Documents/DAW:/var/www/html
     depends_on:
       - mysql
+    environment:
+      - PHP_EXTENSION=mysqli
 
   mysql:
     image: mysql:8.0
